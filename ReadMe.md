@@ -85,3 +85,73 @@ Compensation from the persistence layer.
 
 ## Delivery
 Please upload your results to a publicly accessible Git repo. Free ones are provided by Github and Bitbucket.
+
+Create Clone Repository or Download it.
+
+$ git clone https://github.com/tejassmehta/MindexCodingChallenge.git
+
+How to Run
+- You can run this by executing dotnet run on the command line or in Visual Studio Community Edition.
+
+PostMan Collection
+- Added postman collection which can directly be imported in Postman.
+
+Unit Test Cases
+- Create Unit test cases for reportingstructure type and compensation type.
+
+Task 1
+- Created a REST API for fetching noOfDirects employees for the given EmployeeId
+
+### How to Use
+The following endpoints are available to use:
+```
+* READ
+    * HTTP Method: GET 
+    * URL: localhost:8080/api/reportingstructure/{id}
+    * RESPONSE: reportingstructure
+```
+
+Task 2
+- Created three REST API's for create, fetch and Updating Compensations of Employee.
+
+### How to Use
+The following endpoints are available to use:
+```
+* CREATE
+    * HTTP Method: POST 
+    * URL: localhost:8080/api/compensation
+    * PAYLOAD: compensation
+    * RESPONSE: compensation
+* READ
+    * HTTP Method: GET 
+    * URL: localhost:8080/api/compensation/{id}
+    * RESPONSE: compensation
+* UPDATE
+    * HTTP Method: PUT 
+    * URL: localhost:8080/api/compensation/{id}
+    * PAYLOAD: compensation
+    * RESPONSE: compensation
+    
+```
+
+Compensation has a JSON schema of:
+```json
+{
+  "type":"Compensation",
+  "properties": {
+    "compensationId": {
+      "type": "string"
+    },
+    "employeeId": {
+      "type": "string"
+    },
+    "Salary": {
+      "type": "Decimal"
+    },
+    "EffectiveDate": {
+          "type": "Datetime"
+    }
+  }
+}
+```
+
